@@ -27,9 +27,10 @@ if ! type "java" > /dev/null; then
 
     wget -O jdk.tar.gz -c --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/otn-pub/java/jdk/13+33/5b8a42f3905b406298b72d750b6919f6/jdk-13_linux-x64_bin.tar.gz
     tar -xzvf jdk.tar.gz --directory /usr/local
-    JAVA_HOME=/usr/local/jdk
+    JAVA_HOME=/usr/local/jdk-13
     echo "export JAVA_HOME=${JAVA_HOME}" >> $HOME/.bashrc
     echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> $HOME/.bashrc
+    source $HOME/.bashrc
     
     # clean up
     rm jdk.tar.gz
@@ -59,7 +60,7 @@ fi
 while [tail -1 $HOME/minecraft/eula.txt = "eula=false"]
 do
     printf "${RED} You need to agree to the EULA${NC}"
-    vim eula.txt
+    vim $HOME/minecraft/eula.txt
 done
 
 java -jar -Xms512M -Xmx1008M papermc.jar nogui
