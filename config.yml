@@ -1,0 +1,37 @@
+# global settings
+
+min-chunk-load-threads: 4
+incoming-packet-spam-threshold: 200
+
+
+messages:
+  - kick:
+    - authentication-servers-down: "Could not log you in :("
+
+
+
+# General game and world settings
+
+game_mechanics:
+  - disable-chest-cat-detection: true
+  - disable-end-credits: true
+
+allow-leashing-undead-horse: true
+keep-spawn-loaded: false
+nether-ceiling-void-damage: true
+
+anti-xray:
+  - enabled: true
+  - engine-mode: 2 # replaced all blocks with garbage
+  - replacement-blocks: {stone, planks, obsidion}
+
+optimise-explosions: true
+fishing-time-range:
+  - MinimumTicks: 50
+  - MaxiumumTicks: 500
+
+fast-drain:
+  - lava: true
+loot-tables:
+  auto-replenish: true
+
