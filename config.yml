@@ -17,7 +17,7 @@ game_mechanics:
   - disable-end-credits: true
 
 allow-leashing-undead-horse: true
-keep-spawn-loaded: false
+keep-spawn-loaded: true
 nether-ceiling-void-damage: true
 
 anti-xray:
