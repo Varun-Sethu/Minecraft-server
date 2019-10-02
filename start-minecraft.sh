@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+RED='\033[0;31m'
+
+
 if [ `whoami` != root ]; then
     printf "${RED}PLEASE RUN THIS SCRIPT AS SUPER USER :)${RED}\n"
     exit
